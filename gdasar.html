@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <canvas id="mychart" style="position: relative; height: 50vh; width: 75w;"></canva>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        const ctx = document.getElementById('mychart').getContext('2d');
+        const mychart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['januari','febuari','maret','april','mei','juni'],
+                datasets: [{
+                    label:'penjualan',
+                    data: [10,20,30,40,50,60],
+                    bordercolor: 'rgba(75,192,192,1)',
+                    backgroundcolor: 'rgba(75,192,192,0.2)',
+                    borderwidth: 2
+                }]
+            }
+        }
+
+        );
+</script>
+</html>
